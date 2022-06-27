@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="addClass.css" />
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      $(function(){
+        for (let i = 1; i < 10; i++){
+          $('#matrix').append("<tr></tr>");
+            for(let j = 1; j < 10; j++){
+              $('tr:last-child').append('<td>'+ i + '*' + j + '=' + i*j + '</td>');
+            }
+          }
+          $('td:odd').addClass('gray');
+
+
+      });
+
+    </script>
+</head>
+<body>
+    <table id="matrix">
+        <caption>九九表</caption>
+    </table>
+</body>
+</html>
